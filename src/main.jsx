@@ -7,8 +7,9 @@ import { ContactUs } from './components/Form.jsx'
 import './index.css'
 
 const router = createBrowserRouter([
+  { basename: "/ask-stoic-virtues" },
   {
-    path: "/*",
+    path: "/ask-stoic-virtues",
     element: <App/>,
     errorElement: <ErrorPage />,
     children: [
