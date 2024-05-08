@@ -16,7 +16,10 @@ function App() {
           <h1 className="text-center text-3xl">Your new sceond nature.</h1>
           <p className="text-center text-lg"> 
            Build a Stoic mindset together. <br />
-           I would like to share my unique point of view with real experience. 
+           I would like to share my unique point of view with real experience. <br /> <br />
+
+           <h2> The website is coming soon :) <br /> 
+           You can say hello anytime! </h2> 
           </p>
           <ContactUs />
         <Outlet />
