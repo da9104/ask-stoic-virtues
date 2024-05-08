@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import mainLogo from './assets/logo_1.png'
 import Header from './components/Header'
+import { ContactUs } from './components/Form'
 import './App.css'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
            Build a Stoic mindset together. <br />
            I would like to share my unique point of view with real experience. 
           </p>
+          <ContactUs />
         <Outlet />
       </div>
     </>
