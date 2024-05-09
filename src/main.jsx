@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider,  } from "react-router-dom";
 import App from './App.jsx'
 import ErrorPage from './pages/error-page.jsx'
-import { ContactUs } from './components/Form.jsx'
+import KOR from './pages/KOR'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -14,11 +14,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        // path: "contacts/:contactId",
-        // element: <Contact />,
+        // path: "/KOR",
+        // element: <KOR />,
       },
     ],
   },
+  { path: "/ask-stoic-virtues/KOR",  element: <KOR />, }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -42,7 +42,7 @@ function Header() {
       <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div className="flex flex-shrink-0 items-center">
           {/* Logo <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" /> */}
-          <a href="#" className="text-white rounded-md px-3 py-2 text-md font-medium max-sm:hidden">Ask Stoic Virtues</a>
+          <Link to="/ask-stoic-virtues" className="text-white rounded-md px-3 py-2 text-md font-medium max-sm:hidden">Ask Stoic Virtues</Link>
 
         </div>
         <div className="hidden sm:ml-6 sm:block">
@@ -70,8 +70,8 @@ function Header() {
           </div>
 
           {showModal &&<div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-            <Link  className="block px-4 py-2 text-sm text-gray-700" >KOR</Link>
-            <Link  className="block px-4 py-2 text-sm text-gray-700" >ENG</Link>
+            <Link to="/ask-stoic-virtues/KOR" className="block px-4 py-2 text-sm text-gray-700" >KOR</Link>
+            <Link to="/ask-stoic-virtues" className="block px-4 py-2 text-sm text-gray-700" >ENG</Link>
           </div>}
         </div>
       </div>
