@@ -42,7 +42,7 @@ function Header() {
       <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div className="flex flex-shrink-0 items-center">
           {/* Logo <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" /> */}
-          <a href="#" className=" text-white rounded-md px-3 py-2 text-md font-medium">Ask Stoic Virtues</a>
+          <a href="#" className="text-white rounded-md px-3 py-2 text-md font-medium max-sm:hidden">Ask Stoic Virtues</a>
 
         </div>
         <div className="hidden sm:ml-6 sm:block">
