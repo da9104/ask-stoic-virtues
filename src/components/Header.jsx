@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 function Header() {
     const [showModal, setShowModal] = useState(false)
     const [showMobile, setShowMobile] = useState(false)
+    const [showChatBox, setShowChatBox] = useState(false)
   
     const handleClick = () => {
         if (showModal) {
@@ -18,6 +19,14 @@ function Header() {
             setShowMobile(false)
         } else {
             setShowMobile(true)
+        }
+    }
+
+    const handleChatBoxClick = () => {
+        if (showChatBox) {
+            setShowChatBox(false)
+        } else {
+            setShowChatBox(true)
         }
     }
     
@@ -52,13 +61,22 @@ function Header() {
         </div>
       </div>
       <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <button type="button" className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+        <button onClick={handleChatBoxClick} type="button" className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
           <span className="absolute -inset-1.5"></span>
           <span className="sr-only">Chat notifications</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z" />
          </svg>
         </button>
+
+        { showChatBox &&<div className="absolute -mr-5 -ml-5 right-0 mt-32 z-20 sm:w-screen rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+           
+            <div className='sm:-mr-5 ml-2 w-screen text-center'> 
+             Would you like to have a chat?  <br />
+             Please Sign in.
+            </div>
+   
+          </div> }
 
         <div className="relative ml-3">
           <div>
@@ -69,10 +87,10 @@ function Header() {
             </button>
           </div>
 
-          {showModal &&<div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+          { showModal &&<div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
             <Link to="/ask-stoic-virtues/KOR" className="block px-4 py-2 text-sm text-gray-700" >KOR</Link>
             <Link to="/ask-stoic-virtues" className="block px-4 py-2 text-sm text-gray-700" >ENG</Link>
-          </div>}
+          </div> }
         </div>
       </div>
     </div>
@@ -88,7 +106,6 @@ function Header() {
     </div>
   </div> }
 </nav>
-	
     )
 }
 
